@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>医師のポイント活動まとめ</title>
+  <style>
+    body {
+      font-family: "Helvetica Neue", sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f8fb;
+      color: #333;
+    }
+    header {
+      background-color: #1976d2;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    h2 {
+      color: #1976d2;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+    .rating {
+      font-weight: bold;
+      color: #e67e22;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #888;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>医師のポイント活動まとめ</h1>
+    <p>ポイントで得する！最新情報と登録リンクを一括掲載</p>
+  </header>
+  <div class="container">
+
+    <section>
+      <h2>ポイント活動とは？</h2>
+      <div class="card">
+        <p>
+          医師向けのアンケート回答、製薬会社からの情報提供視聴、症例投稿、記事閲覧などでポイントやギフト券を得られる活動です。
+          スキマ時間に行えるため、日々の業務の合間でも手軽に参加できます。
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>おすすめのポイントサイトと評価</h2>
+
+      <!-- サイト一覧 ここから -->
+      <script>
+        const sites = [
+          { name: "m3.com", desc: "国内最大級の医師専用サイト。アンケート、講演視聴、記事閲覧などでポイントが貯まります。", activity: "アンケート（高単価）、動画視聴、医療記事閲覧", stars: 5 },
+          { name: "MedPeer（メドピア）", desc: "医師SNSのようなサイト。アンケート量が多くポイントが貯まりやすいです。", activity: "アンケート、症例相談回答、動画視聴", stars: 4 },
+          { name: "日経メディカル Online", desc: "医療ニュースを読むついでにアンケート参加でポイント獲得が可能。", activity: "記事閲覧、アンケート", stars: 3 },
+          { name: "Mediwel（メディウェル）", desc: "アンケートの単価が高め。頻度は低めだが確実に稼げる。", activity: "医師限定アンケート", stars: 3 },
+          { name: "Medu4 Point Club", desc: "医学生〜若手医師向けの学習サービス連携。動画や模試でポイントが貯まる。", activity: "学習動画視聴、模試受験", stars: 3 },
+          { name: "CareNet", desc: "医療情報ポータル。動画視聴でポイントが貯まる。", activity: "動画視聴、クイズ回答", stars: 4 },
+          { name: "Medical Tribune", desc: "読み応えのある記事が豊富。記事閲覧やアンケートでポイント。", activity: "記事閲覧、アンケート", stars: 3 },
+          { name: "Doctors File", desc: "取材協力や執筆依頼で謝礼あり。", activity: "取材協力、記事提供", stars: 3 },
+          { name: "Medical Plaza", desc: "若手医師中心のアンケート依頼が多い。", activity: "アンケート、座談会参加", stars: 4 },
+          { name: "Medinew（メディニュー）", desc: "製薬企業向けの医師向け情報。コンテンツ視聴でポイント。", activity: "コンテンツ閲覧、レビュー投稿", stars: 3 },
+          { name: "Doctors Cloud", desc: "医師による記事投稿やレビューで謝礼。", activity: "コラム投稿、レビュー", stars: 3 },
+          { name: "Medical QOL", desc: "医師のライフスタイルに特化した情報サイト。", activity: "記事閲覧、アンケート", stars: 2 },
+          { name: "M3キャリア", desc: "転職相談でポイント付与。セミナー参加も。", activity: "転職相談、セミナー視聴", stars: 3 },
+          { name: "Doctors Voice", desc: "調査協力型。謝礼付きの簡易アンケート。", activity: "アンケート回答", stars: 3 },
+          { name: "MedLink", desc: "製薬会社と連携したアンケートサイト。", activity: "製薬系アンケート", stars: 3 }
+        ];
+        document.addEventListener("DOMContentLoaded", () => {
+          const section = document.querySelector("section:nth-of-type(2)");
+          sites.forEach(site => {
+            const card = document.createElement("div");
+            card.className = "card";
+            card.innerHTML = `
+              <h3>● ${site.name}</h3>
+              <p>${site.desc}</p>
+              <p><strong>稼げる内容：</strong>${site.activity}</p>
+              <p class="rating">おすすめ度：${"★".repeat(site.stars)}${"☆".repeat(5 - site.stars)}</p>
+              <p><strong>登録URL：</strong>（ここにURL）</p>
+              <p><strong>招待コード：</strong>（ここにコード）</p>
+            `;
+            section.appendChild(card);
+          });
+        });
+      </script>
+      <!-- サイト一覧 ここまで -->
+
+    </section>
+
+    <section>
+      <h2>ポイントを効率よく稼ぐコツ</h2>
+      <div class="card">
+        <ul>
+          <li>高単価なアンケートは早めに回答しましょう（先着制あり）</li>
+          <li>複数サイトに登録して機会を逃さないようにする</li>
+          <li>毎週決まった時間に確認する習慣をつける</li>
+          <li>1日5〜10分の積み重ねで月数千円分のポイントに</li>
+        </ul>
+      </div>
+    </section>
+
+  </div>
+  <footer>
+    &copy; 2025 医師のポイント活動まとめサイト
+  </footer>
+</body>
+</html>
